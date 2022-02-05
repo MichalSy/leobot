@@ -7,7 +7,7 @@ A small robot that can move autonomously. It should recognise cubes with QR code
 As a platform, a Linux 64Bit ARM is to be used. A Raspberry PI 4 with Ubuntu Server 64Bit will be used for the development. Later this will be replaced by a smaller board. The complete software is to be developed with dotnet 6.x.
 
 The project will have the following milestones:
-- Configuration of a Linux system for development
+- Configuration of a Linux system for remote development
 - Control of simple outputs (LEDs)
 - Control of an H-bridge to control DC motors
 - Generating PWM signals to control servos or similar devices
@@ -23,6 +23,13 @@ With this project, I would like to give everyone the possibility to follow the p
 You are welcome to submit improvements or suggestions to improve the project together.
 
 I will push the individual partial successes into their own branches so that everyone can access the status at that stage. This means that each individual step is also reflected in the software.
+
+<br>
+
+Diary entries:
+- [05.02.22 - Configuration of a Linux system for remote development (& debugging) (PART 1)](docs/diary/01_Configure_LinuxSystem.md)
+
+<br>
 
 # License
 This project is open sourced for educational purpose, Commercial usage is prohibited.
