@@ -96,6 +96,7 @@ For the beginning, I will simply use the root user. So that I don't get any perm
    2. Input "root" press enter
    3. Remove Comment "#" for PermitRootLogin
    4. Enable Root Login
+   
       ![](./images/enable_root_login.png)
    5. Press ctrl + x for save
 4. Restart ssh server
@@ -113,6 +114,7 @@ For the beginning, I will simply use the root user. So that I don't get any perm
    When asked for a password, simply press Enter twice. 
 
    Now it should look like this for you:
+
    ![](./images/ssh-keygen.png)
 
 7. Transfer your id_rsa.pub to the device
