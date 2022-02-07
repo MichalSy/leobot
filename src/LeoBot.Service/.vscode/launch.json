@@ -1,0 +1,89 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": ".NET Core Launch (web)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/bin/Debug/net6.0/LeoBot.Service.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "stopAtEntry": false,
+            "serverReadyAction": {
+                "action": "openExternally",
+                "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
+            },
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceFolder}/Views"
+            }
+        },
+        {
+            "name": ".NET Core Attach",
+            "type": "coreclr",
+            "request": "attach"
+        },
+        {
+            "name": "Publish & Copy & Remote Launch",
+            "preLaunchTask": "remotePublish",
+            "type": "coreclr",
+            "request": "launch",
+            "program": "dotnet",
+            "args": [
+                "LeoBot.Service.dll"
+            ],
+            "cwd": "~/leobot-service/",
+            "stopAtEntry": false,
+            "justMyCode": true,
+            "pipeTransport": {
+                "pipeCwd": "${workspaceRoot}",
+                "pipeProgram": "ssh",
+                "pipeArgs": [
+                    "-T",
+                    "root@leobot"
+                ],
+                "debuggerPath": "vsdbg"
+            },
+            "sourceFileMap": {
+                "~/leobot-service/": "${workspaceFolder}"
+            },
+            "symbolOptions": {
+                "searchMicrosoftSymbolServer": false
+            }
+        },
+        {
+            "name": "Only Remote Launch",
+            "type": "coreclr",
+            "request": "launch",
+            "program": "dotnet",
+            "args": [
+                "LeoBot.Service.dll"
+            ],
+            "cwd": "~/leobot-service/",
+            "stopAtEntry": false,
+            "justMyCode": true,
+            "console": "internalConsole",
+            "pipeTransport": {
+                "pipeCwd": "${workspaceRoot}",
+                "pipeProgram": "ssh",
+                "pipeArgs": [
+                    "-T",
+                    "root@leobot"
+                ],
+                "debuggerPath": "vsdbg"
+            },
+            "sourceFileMap": {
+                "~/leobot-service/": "${workspaceFolder}"
+            },
+            "symbolOptions": {
+                "searchMicrosoftSymbolServer": false
+            }
+        }
+    ]
+}

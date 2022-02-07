@@ -1,0 +1,46 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/LeoBot.Service.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "publish",
+            "command": "cmd",
+            "type": "shell",
+            "args": [
+                "/c",
+                "dotnet publish -r linux-arm64 -c Debug --no-self-contained",
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "remotePublish",
+            "type": "shell",
+            "dependsOn": "publish",
+            "command": "scp -rpCB ${workspaceFolder}/bin/Debug/net6.0/linux-arm64/publish/*.* root@leobot:~/leobot-service/",
+            "problemMatcher": []
+        },
+        {
+            "label": "watch",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "watch",
+                "run",
+                "--project",
+                "${workspaceFolder}/LeoBot.Service.csproj"
+            ],
+            "problemMatcher": "$msCompile"
+        }
+    ]
+}
