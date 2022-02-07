@@ -16,10 +16,12 @@ Date: 07.02.2022
    cd .\src
    ```
 3. Create webapi service
+   
    ```
    dotnet new webapi -minimal -o LeoBot.Service
    ```
 4. Open your new servvice
+   
    ```
    cd .\LeoBot.Service
    code .
@@ -64,6 +66,7 @@ Now we will prepare the service so that we can run it on our Raspberry Pi.
    In line 11 we deactivate the check that we are in a development environment. This means that the Swagger UI is always added, even in release mode. In line 17 we deactivate the HTTPS redirect, so that we can also access our service with HTTP and do not need an HTTPS certificate.
 
 3. Open "Properties/launchSettings.json"
+   
    Here we can configure how our application should be started. First we remove all settings for IIS.
    Next, we disable the autostart from the web browser and change ApplicationUrl. 
    
@@ -86,6 +89,7 @@ Now we will prepare the service so that we can run it on our Raspberry Pi.
    ```
 
 4. Open "appsettings.json"
+   
    Here the port must be configured so that the application on the Raspberry Pi uses the correct port.
    ```
    {
@@ -101,6 +105,7 @@ Now we will prepare the service so that we can run it on our Raspberry Pi.
    ```
 
 5. Open ".vscode/tasks.json"
+   
    Now we need to create a task that copies our application to the Raspberry Pi.
 
    Replace the publish task with that:
@@ -130,7 +135,9 @@ Now we will prepare the service so that we can run it on our Raspberry Pi.
    }
    ```
 
-   Now you can test the transfer with hit F1 -> "run task" -> "remotePublish". You should see the following output at the end:
+   Now you can test the transfer with hit F1 -> "run task" -> "remotePublish". 
+   
+   You should see the following output at the end:
 
    ![](./images/remote-publish.png)
 
@@ -202,12 +209,14 @@ Now we will prepare the service so that we can run it on our Raspberry Pi.
 <br>
 
 ## You did it!
+
 Now we have everything configured and can really run and debug our application on the Raspberry Pi.
 
 1. Open "Run and debug" Tab (ctrl + shift + D)
 2. Select "Publish & Copy & Remote Launch"
 3. Click on the green "Run" button
-   Nach einer kurzen Zeit wirst du sehen, dass der Service gestartet wurde:
+   
+   After a short time, you will see that the service has started:
 
    ![](./images/run-app-on-rpi.png)
 
@@ -216,6 +225,7 @@ Now we have everything configured and can really run and debug our application o
    http://leobot:5000/swagger
 
 5. Debug program.cs
+   
    Set a breakpoint and execute the endpoint "weatherforecast" via swagger.
    
    ![](./images/debug-service.png)
