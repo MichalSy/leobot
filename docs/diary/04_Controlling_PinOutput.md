@@ -204,7 +204,7 @@ Now start the project on the device again and look at the result :)
 
 http://leobot:5000/blink
 
-<img src="https://michalsy.github.io/leobot-media/gifs/flash_led.gif" width="400"  />
+![](https://michalsy.github.io/leobot-media/gifs/flash_led.gif) 
 
 
 <br>
