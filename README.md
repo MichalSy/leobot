@@ -30,7 +30,7 @@ Diary entries:
 - [05.02.22 - Configuration of a Linux system for remote development (& debugging) (PART 1)](docs/diary/01_Configure_LinuxSystem.md)
 - [07.02.22 - Configuration of a Linux system for remote development (& debugging) (PART 2)](docs/diary/02_Configure_LinuxSystem.md)
 - [07.02.22 - Create a rest webapi application & deploy/debug on device](docs/diary/03_CreateService.md)
-
+- [10.02.22 - Controlling GPIO Pin Output (Let's flash a LED)](docs/diary/04_Controlling_PinOutput.md)
 
 
 
